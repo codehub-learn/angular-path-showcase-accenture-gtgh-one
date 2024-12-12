@@ -1,0 +1,14 @@
+@for (currentUser of shownUsers; track $index) {
+    <div>
+      <span>
+        {{$index + 1}}) {{currentUser.firstname}}
+      </span>
+      @if(currentUser.age > 50){
+        <span>
+            Age: {{currentUser.age}}
+        </span>
+      } @else {
+        <span>Age is too young for this </span>
+      }
+    </div>
+}
